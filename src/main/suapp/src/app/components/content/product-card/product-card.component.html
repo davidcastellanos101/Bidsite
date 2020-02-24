@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <owl-carousel-o
+    [options]="mySlideOptions"
+  >
+  <ng-template carouselSlide *ngFor="let image of mySlideImages; let i = index">
+    <div class="slide">
+      <img src="{{ image }}" />
+    </div>
+  </ng-template>
+
+  </owl-carousel-o>
+  <mat-card-content>
+    <p>
+      texto blabalablall
+    </p>
+    <br />
+    <h3><b>$23452345</b></h3>
+  </mat-card-content>
+</mat-card>
+
