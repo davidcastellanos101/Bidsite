@@ -36,7 +36,8 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./src/assets/lib/fontawesome/js/all.js"
+              "./src/assets/lib/fontawesome/js/all.js",
+              "./src/assets/lib/custom/js/product_card.js"
             ]
           },
           "configurations": {

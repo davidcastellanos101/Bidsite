@@ -1,9 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import * as jQuery from "jquery";
-declare const plusDivs: any;
-declare const currentDiv: any;
-declare const showDivs: any;
-declare const setProductId: any;
 
 @Component({
   selector: "app-product-card",
@@ -15,14 +10,26 @@ export class ProductCardComponent implements OnInit {
   @Input()
   idProducto: string;
 
+  indiceFoto: number = 0;
+
   mySlideImages = ["assets/img/img_1.jpg", "assets/img/img_2.jpg", "assets/img/img_3.jpg"];
 
   constructor() {}
 
   ngOnInit(): void {
-    setProductId(this.idProducto);
-    jQuery(document).ready(function() {
-      showDivs(1);
-    });
+  }
+
+  ngAfterViewInit(): void{
+  }
+
+  pasarFoto(n: number): void{
+    n += this.indiceFoto;
+    if (n >= this.mySlideImages.length){
+      n = 0;
+    }
+    if (n < 0){
+      n = this.mySlideImages.length - 1;
+    }
+    this.indiceFoto = n;
   }
 }
