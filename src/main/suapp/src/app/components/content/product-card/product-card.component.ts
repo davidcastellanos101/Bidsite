@@ -1,40 +1,28 @@
-import { Component, OnInit } from "@angular/core";
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit, Input } from "@angular/core";
+import * as jQuery from "jquery";
+declare const plusDivs: any;
+declare const currentDiv: any;
+declare const showDivs: any;
+declare const setProductId: any;
 
 @Component({
   selector: "app-product-card",
   templateUrl: "./product-card.component.html",
-  styleUrls: ["./product-card.component.scss"]
+  styleUrls: ["./product-card.component.scss", "./aux.css"]
 })
 export class ProductCardComponent implements OnInit {
-  mySlideImages = ["assets/img/img.jpg", "assets/img/img2.jpg"];
 
-  mySlideOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['Previous', 'Next'],
-    responsive: {
-      0: {
-        items: 1 
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  };
-  
+  @Input()
+  idProducto: string;
+
+  mySlideImages = ["assets/img/img_1.jpg", "assets/img/img_2.jpg", "assets/img/img_3.jpg"];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setProductId(this.idProducto);
+    jQuery(document).ready(function() {
+      showDivs(1);
+    });
+  }
 }

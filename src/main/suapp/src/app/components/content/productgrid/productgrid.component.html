@@ -1,6 +1,6 @@
 <mat-grid-list cols="4" gutterSize="5">
     <mat-grid-tile
-        *ngFor="let tile of tiles">
-        <app-product-card></app-product-card>
+        *ngFor="let Producto of productos">
+        <app-product-card idProducto="{{Producto.idProducto}}"></app-product-card>
     </mat-grid-tile>
   </mat-grid-list>
