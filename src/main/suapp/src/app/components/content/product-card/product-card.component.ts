@@ -12,7 +12,7 @@ export class ProductCardComponent implements OnInit {
 
   indiceFoto: number = 0;
 
-  mySlideImages = ["assets/img/img_1.jpg", "assets/img/img_2.jpg", "assets/img/img_3.jpg"];
+  mySlideImages = ["assets/img/img_1.jpg", "assets/img/img_2.jpg", "assets/img/img_3.jpg", "assets/img/img.jpg", "assets/img/img2.jpg"];
 
   constructor() {}
 
