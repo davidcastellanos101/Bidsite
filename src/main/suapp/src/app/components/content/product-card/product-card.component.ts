@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from "@angular/core";
 @Component({
   selector: "app-product-card",
   templateUrl: "./product-card.component.html",
-  styleUrls: ["./product-card.component.scss", "./aux.css"]
+  styleUrls: ["./product-card.component.scss", "./product-card-2.css"]
 })
 export class ProductCardComponent implements OnInit {
 
