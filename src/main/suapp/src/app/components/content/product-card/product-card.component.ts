@@ -22,6 +22,10 @@ export class ProductCardComponent implements OnInit {
   ngAfterViewInit(): void{
   }
 
+  currentDiv(n: number) {
+    this.indiceFoto = n-1;
+  }
+
   pasarFoto(n: number): void{
     n += this.indiceFoto;
     if (n >= this.mySlideImages.length){

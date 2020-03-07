@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { MatToolbarModule } from "@angular/material/toolbar";
 /**
  * 
 import { A11yModule } from "@angular/cdk/a11y";
@@ -41,7 +42,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
-import { MatToolbarModule } from "@angular/material/toolbar";
+
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
  */
@@ -51,6 +52,7 @@ import { MatTreeModule } from "@angular/material/tree";
 
     MatCardModule,
     MatGridListModule,
+    MatToolbarModule,
     CommonModule,
     /** 
     A11yModule,
@@ -89,7 +91,6 @@ import { MatTreeModule } from "@angular/material/tree";
     MatSortModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
     PortalModule,
@@ -100,6 +101,7 @@ import { MatTreeModule } from "@angular/material/tree";
 
     MatCardModule,
     MatGridListModule,
+    MatToolbarModule,
     /** 
      *     
     A11yModule,
@@ -138,7 +140,6 @@ import { MatTreeModule } from "@angular/material/tree";
     MatSortModule,
     MatTableModule,
     MatTabsModule,
-    MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
     PortalModule,

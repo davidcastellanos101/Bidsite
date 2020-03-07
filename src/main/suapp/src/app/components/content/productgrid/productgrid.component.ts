@@ -45,16 +45,16 @@ export class ProductgridComponent implements OnInit {
   }
 
   adaptarContenido(size: number): void{
-    if (size >= 1100) {
+    if (size >= 1366) {
       this.numColumnas = 4;
     }
-    if (size < 1100 && size >= 800) {
+    if (size < 1366 && size >= 1050) {
       this.numColumnas = 3;
     }
-    if (size < 800 && size >= 600) {
+    if (size < 1050 && size >= 710) {
       this.numColumnas = 2;
     }
-    if (size < 600) {
+    if (size < 710) {
       this.numColumnas = 1;
     }
   }
