@@ -23,7 +23,7 @@ export class ProductCardComponent implements OnInit {
   }
 
   currentDiv(n: number) {
-    this.indiceFoto = n-1;
+    this.indiceFoto = n;
   }
 
   pasarFoto(n: number): void{
@@ -35,5 +35,13 @@ export class ProductCardComponent implements OnInit {
       n = this.mySlideImages.length - 1;
     }
     this.indiceFoto = n;
+  }
+
+  estiloPunto(n: number): Object {
+    
+    if (n == this.indiceFoto){
+        return "w3-white"
+    }
+    return "w3-gray w3-border"
   }
 }

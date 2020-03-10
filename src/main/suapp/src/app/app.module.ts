@@ -13,6 +13,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { ContentComponent } from "./components/content/content.component";
 import { TestComponent } from "./components/content/test/test.component";
 import { ProductgridComponent } from './components/content/productgrid/productgrid.component';
+import { CategoriasComponent } from './components/content/categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductgridComponent } from './components/content/productgrid/productgr
     FooterComponent,
     ContentComponent,
     TestComponent,
-    ProductgridComponent
+    ProductgridComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
