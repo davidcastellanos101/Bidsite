@@ -1,13 +1,11 @@
-/** 
-(function(){
-  // setup your carousels as you normally would using JS
-  // or via data attributes according to the documentation
-  // https://getbootstrap.com/javascript/#carousel
-  $('#carousel123').carousel({ interval: 2000 });
-  $('#carouselABC').carousel({ interval: 3600 });
-}());
+function inicializarCarousel(){
+  console.log("entró");
+  $('#carousel123').carousel({ interval: 4000 });
+  $('#carouselABC').carousel({ interval: 5600 });
+  mostrarSlides();
+}
 
-(function(){
+function mostrarSlides(){
   $('.carousel-showmanymoveone .item').each(function(){
     var itemToClone = $(this);
 
@@ -25,5 +23,4 @@
         .appendTo($(this));
     }
   });
-}());
-*/
+}

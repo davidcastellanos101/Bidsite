@@ -33,7 +33,9 @@ export class ProductgridComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  	this.adaptarContenido(window.innerWidth);
+  }
 
   ngAfterViewInit(): void{
     this.adaptarContenido(window.innerWidth);

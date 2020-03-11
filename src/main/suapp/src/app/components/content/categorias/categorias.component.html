@@ -2,7 +2,6 @@
 <div class="container">
   <div class="row header-row">
     <div class="col-md-offset-2 col-md-8 title">
-      <img alt="" class="img-responsive logo" src="assets/img/img.jpg">
       <h1>Título</h1>
           <p>Subtitulo</p>
     </div>    
@@ -11,30 +10,14 @@
     <div class="col-md-12">
       <div class="carousel carousel-showmanymoveone slide" id="carousel123">
         <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>          
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
+          <ng-container *ngFor="let Producto of productos; let i = index">
+            <div class="item {{i == 0 ? 'active' : ''}}">
+              <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="{{Producto.imgSrc}}" class="img-responsive"></a>
+                <!--style="min-height: 180px; max-height: 180px;object-fit: cover;"-->
+                <h1 style="margin: 0;">{{Producto.precio}}</h1><h4>{{Producto.nombre}}</h4>
+              </div>
+            </div>  
+          </ng-container>
         </div>
         <a class="left carousel-control" href="#carousel123" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
         <a class="right carousel-control" href="#carousel123" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
@@ -50,30 +33,13 @@
     <div class="col-md-12">
       <div class="carousel carousel-showmanymoveone slide" id="carouselABC">
         <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>          
-          <div class="item active">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
-          <div class="item">
-            <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="assets/img/img.jpg" class="img-responsive"></a></div>
-          </div>
+          <ng-container *ngFor="let Producto of productos; let i = index">
+            <div class="item {{i == 0 ? 'active' : ''}}">
+              <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="{{Producto.imgSrc}}" class="img-responsive"></a>
+                <h1 style="margin: 0;">{{Producto.precio}}</h1><h4>{{Producto.nombre}}</h4>
+              </div>
+            </div>  
+          </ng-container>
         </div>
         <a class="left carousel-control" href="#carouselABC" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
         <a class="right carousel-control" href="#carouselABC" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>

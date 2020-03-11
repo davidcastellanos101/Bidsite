@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function inicializarCarousel(): any;
+
+export interface Producto {
+  nombre: String;
+  precio: String;
+  imgSrc: String;
+}
+
 @Component({
   selector: 'app-categorias',
   templateUrl: './categorias.component.html',
@@ -7,11 +15,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriasComponent implements OnInit {
 
+  productos: Producto[] = [
+    { nombre: "Ferrari Modena", precio: "$250.000.000", imgSrc: "assets/img/img.jpg" },
+    { nombre: "Ferrari Enzo", precio: "$350.000.000", imgSrc: "assets/img/img2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_1.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_3.jpg" },
+    { nombre: "Ferrari Modena", precio: "$250.000.000", imgSrc: "assets/img/img.jpg" },
+    { nombre: "Ferrari Enzo", precio: "$350.000.000", imgSrc: "assets/img/img2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_1.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_3.jpg" },
+    { nombre: "Ferrari Modena", precio: "$250.000.000", imgSrc: "assets/img/img.jpg" },
+    { nombre: "Ferrari Enzo", precio: "$350.000.000", imgSrc: "assets/img/img2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_1.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_2.jpg" },
+    { nombre: "BMW 320i", precio: "$35.000.000", imgSrc: "assets/img/img_3.jpg" }
+
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  ngAfterViewInit(): void{
+    inicializarCarousel();
+  }
 }
 /** 
 (function(){
