@@ -19,8 +19,14 @@ export class CategoriasComponent implements OnInit {
     { nombre: "Autos", imgSrc: "assets/img/categorias/img2.jpg" },
     { nombre: "Motos", imgSrc: "assets/img/categorias/img1.jpg" },
     { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
+    { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
+    { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
+    { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
+
 
   ];
+
+  anchuraCategoria: number = 400;
 
   constructor() { }
 
@@ -29,5 +35,14 @@ export class CategoriasComponent implements OnInit {
 
   ngAfterViewInit(): void{
     //inicializarCarousel();
+  }
+
+  acomodarCategorias(): void{
+  }
+
+  getEstiloCategoria(indice: number): Object {
+    let gradosPorcategoria: number = indice*(360/this.categorias.length);
+    return {'transform': 'rotateY(' + gradosPorcategoria + 'deg) '+
+    'translateZ(' +this.anchuraCategoria+ 'px)'};
   }
 }
