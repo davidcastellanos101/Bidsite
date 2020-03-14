@@ -1,3 +1,6 @@
+<!--
+
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Bitter" rel="stylesheet" type="text/css">
 <div class="container">
   <div class="row header-row">
@@ -13,7 +16,7 @@
           <ng-container *ngFor="let Producto of productos; let i = index">
             <div class="item {{i == 0 ? 'active' : ''}}">
               <div class="col-xs-12 col-sm-6 col-md-3"><a href="#"><img src="{{Producto.imgSrc}}" class="img-responsive"></a>
-                <!--style="min-height: 180px; max-height: 180px;object-fit: cover;"-->
+               comment <style="min-height: 180px; max-height: 180px;object-fit: cover;">
                 <h1 style="margin: 0;">{{Producto.precio}}</h1><h4>{{Producto.nombre}}</h4>
               </div>
             </div>  
@@ -46,4 +49,16 @@
       </div>
     </div>
   </div>  
+</div>
+-->
+
+<h2>Categorias</h2>
+<div class="content-all">
+    <div class="content-carrousel">
+      <ng-container *ngFor="let Categoria of categorias; let i = index">
+        <figure>
+          <img src="{{Categoria.imgSrc}}">
+        </figure>  
+      </ng-container>
+    </div>
 </div>
