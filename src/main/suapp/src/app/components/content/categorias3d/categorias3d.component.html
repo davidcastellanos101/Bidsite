@@ -1,0 +1,10 @@
+<h2>Categorias</h2>
+<div class="content-all">
+    <div class="content-carrousel">
+      <ng-container *ngFor="let Categoria of categorias; let i = index">
+        <figure [ngStyle]="getEstiloCategoria(i)">
+          <img src="{{Categoria.imgSrc}}">
+        </figure>  
+      </ng-container>
+    </div>
+</div>

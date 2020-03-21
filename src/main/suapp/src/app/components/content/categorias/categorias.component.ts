@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
-declare function inicializarCarousel(): any;
 
 export interface Categoria {
   nombre: String;
@@ -22,27 +21,28 @@ export class CategoriasComponent implements OnInit {
     { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
     { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
     { nombre: "Mulas", imgSrc: "assets/img/categorias/img4.jpg" },
-
-
   ];
-
-  anchuraCategoria: number = 400;
 
   constructor() { }
 
   ngOnInit(): void {
+  	//this.adaptarContenido(window.innerWidth);
   }
 
   ngAfterViewInit(): void{
-    //inicializarCarousel();
+   // this.adaptarContenido(window.innerWidth);
+  }
+  
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    //this.adaptarContenido(event.target.innerWidth);
   }
 
-  acomodarCategorias(): void{
+  pantallaPeque(): boolean{
+    if (window.innerWidth < 1366) {
+      return true;
+    }
+    return false;
   }
 
-  getEstiloCategoria(indice: number): Object {
-    let gradosPorcategoria: number = indice*(360/this.categorias.length);
-    return {'transform': 'rotateY(' + gradosPorcategoria + 'deg) '+
-    'translateZ(' +this.anchuraCategoria+ 'px)'};
-  }
 }

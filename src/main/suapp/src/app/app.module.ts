@@ -14,6 +14,8 @@ import { ContentComponent } from "./components/content/content.component";
 import { TestComponent } from "./components/content/test/test.component";
 import { ProductgridComponent } from './components/content/productgrid/productgrid.component';
 import { CategoriasComponent } from './components/content/categorias/categorias.component';
+import { Categorias2dComponent } from './components/content/categorias2d/categorias2d.component';
+import { Categorias3dComponent } from './components/content/categorias3d/categorias3d.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CategoriasComponent } from './components/content/categorias/categorias.
     ContentComponent,
     TestComponent,
     ProductgridComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    Categorias2dComponent,
+    Categorias3dComponent
   ],
   imports: [
     BrowserModule,
